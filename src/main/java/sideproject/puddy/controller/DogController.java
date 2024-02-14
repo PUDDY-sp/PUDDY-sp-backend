@@ -17,6 +17,7 @@ import sideproject.puddy.service.RegisterNumberService;
 public class DogController {
     private final DogService dogService;
     private final RegisterNumberService registerNumberService;
+    
     @PostMapping("/dog")
     public ResponseEntity<String> postDog(@RequestBody PostDogRequest postDogRequest){
         return dogService.saveDog(postDogRequest);
