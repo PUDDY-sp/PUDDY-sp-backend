@@ -25,6 +25,7 @@ public class ChatController {
     public ResponseEntity<ChatDetailResponse> enterChat(@PathVariable Long chatId){
         return chatAndMessageService.enterChat(chatId);
     }
+
     @DeleteMapping("/chat/{chatId}")
     public ResponseEntity<String> deleteChat(@PathVariable Long chatId){
         return chatService.deleteChat(chatId);
