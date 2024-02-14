@@ -11,5 +11,5 @@ RUN ./gradlew clean build -x test
 
 FROM openjdk:17-jdk-alpine
 COPY --from=builder /usr/src/build/libs/puddy-0.0.1-SNAPSHOT.jar /usr/app/app.jar
-COPY src/main/resources/application-prod.yml /app/src/main/resources/
+COPY -—from=builder /usr/src/src/main/resources/application-prod.yml /usr/app/resources/
 ENTRYPOINT ["java", "-jar", "/usr/app/app.jar", "--spring.profiles.active=prod"]
