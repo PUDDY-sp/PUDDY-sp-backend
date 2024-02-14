@@ -63,5 +63,6 @@ jobs:
           port: ${{ 22 }}
           script: |
             docker compose down
+            docker compose pull
             docker image prune -a
-            docker compose up -d
+            docker compose up
