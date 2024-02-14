@@ -16,6 +16,7 @@ import sideproject.puddy.service.ChatService;
 public class ChatController {
     private final ChatService chatService;
     private final ChatAndMessageService chatAndMessageService;
+
     @GetMapping("/chat")
     public GetChatListResponse getChatList(){
         return chatService.getChatList();
