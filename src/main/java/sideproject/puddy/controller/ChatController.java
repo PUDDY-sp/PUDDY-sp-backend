@@ -14,6 +14,7 @@ import sideproject.puddy.service.ChatService;
 @RequiredArgsConstructor
 @RequestMapping("/api")
 public class ChatController {
+    
     private final ChatService chatService;
     private final ChatAndMessageService chatAndMessageService;
 
