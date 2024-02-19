@@ -58,7 +58,7 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USERNAME }}
           password: ${{ secrets.SSH_PASSWORD }}
-          port: ${{ 22 }}
+          port: ${{ secrets.SSH_PORT }}
           script: |
             docker compose down
             docker compose pull
