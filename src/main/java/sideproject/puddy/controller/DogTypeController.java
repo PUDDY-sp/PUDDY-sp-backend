@@ -15,6 +15,7 @@ import sideproject.puddy.service.DogTypeService;
 public class DogTypeController {
     private final DogTypeService dogTypeService;
     @GetMapping("/dogtype")
+    
     public TypeListDto getTagList(){
         return dogTypeService.findAll();
     }
